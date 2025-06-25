@@ -145,7 +145,7 @@ label= "SYM"                               ;
 
              &kp RA(E)  &kp DK_LABK &kp LS(DK_LABK) &kp RA(N2)  &kp RA(N4)      &kp RA(DK_LABK) &kp RA(N8)  &kp RA(N9)  &kp DK_QUOT &kp DK_ACUT
         &kp RA(DK_DIAE) &kp LS(DK_QUOT) &kp DK_PLUS &kp LS(N0)  &kp LS(N6)      &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N2)  &kp LS(DK_ACUT)
-     &none      &none     &kp DK_DIAE   &kp LS(DK_DIAE) &kp LS(N3)  &kp LS(N5)      &kp RA(DK_ACUT) &kp RA(N7)  &kp RA(N10) &kp LS(N1)  &kp LS(DK_PLUS) &none
+     &none      &none   &kp DK_DIAE   &kp LS(DK_DIAE) &kp LS(N3) &kp LS(N5)     &kp RA(DK_ACUT) &kp RA(N7)  &kp RA(N0) &kp LS(N1)  &kp LS(DK_PLUS) &none
                                         &trans      &trans      &trans          &trans      &trans      &trans
                         >;
                 };
