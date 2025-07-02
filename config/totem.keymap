@@ -24,20 +24,18 @@
 #define BLT  4
 
 &mt {
-  quick-tap-ms = <100>;
-  global-quick-tap;
-  flavor = "tap-preferred";
-  tapping-term-ms = <170>;
+  flavor = "balanced";
+  tapping-term-ms = <200>;
+};
+
+&lt {
+  flavor = "balanced";
+  tapping-term-ms = <200>;
 };
 
 / {
      combos {
             compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-            };
             combo_blt {
                 timeout-ms = <100>;
                 key-positions = <29 30 31>;
@@ -60,7 +58,7 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃     Å     ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃     -     ┃     Ø     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    ESC    ┃ TAB (SYM) ┃ENTER (NUM)┃   ┃SPACE (NAV)┃   BSPC    ┃   DEL     ┃
+//                                     ┃    ESC    ┃ TAB (NUM) ┃ENTER (NAV)┃   ┃SPACE (NAV)┃ BSPC (SYM)┃   DEL     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -68,7 +66,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G           &kp H       &mt RSHFT J &mt RCTRL K &mt RALT L  &mt RGUI DK_AE
     &kp DK_AA   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp DK_OE
-                                        &kp ESC     &lt SYM TAB &lt NUM RET     &lt NAV SPACE &kp BSPC  &kp DEL
+                                        &kp ESC     &lt NUM TAB &lt NAV RET     &lt NAV SPACE &lt SYM BSPC  &kp DEL
                         >;
                 };
 
