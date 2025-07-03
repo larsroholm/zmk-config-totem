@@ -38,7 +38,7 @@
             compatible = "zmk,combos";
             combo_blt {
                 timeout-ms = <100>;
-                key-positions = <29 30 31>;
+                key-positions = <20 21 22>;
                 bindings = <&tog BLT>;
             };
     };
@@ -80,9 +80,9 @@ label= "NAVIGATION"                        ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃           ┃           ┃   REDO    ┃   UNDO    ┃ PRINTSCR  ┃   ┃  PAGE_UP  ┃   HOME    ┃     UP    ┃   END     ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃           ┃   ┃ PAGE_DOWN ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃           ┃
+//             ┃   WIN     ┃    ALT    ┃   CTRL    ┃   SHIFT   ┃           ┃   ┃ PAGE_DOWN ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┃           ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -90,8 +90,8 @@ label= "NAVIGATION"                        ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &none       &none       &kp LC(Y)   &kp LC(Z)   &kp PSCRN       &kp PG_UP   &kp HOME    &kp UP      &kp END     &none
-                &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none           &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &none
-     &none      &none       &none       &none       &none       &none           &none       &none       &none       &none       &none       &none
+                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &none
+     &none      &none       &kp LC(X)   &kp LC(C)   &kp LC(V)   &none           &none       &none       &none       &none       &none       &none
                                         &trans      &trans      &trans          &trans      &trans      &trans
                         >;
                 };
@@ -156,20 +156,20 @@ label= "SYMBOL"                            ;
 label= "BLUETOOTH"                         ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   BT 1    ┃   BT 2    ┃   BT 3    ┃   BT 4    ┃   BT 5    ┃   ┃  OUT TOG  ┃           ┃           ┃           ┃           ┃
+//             ┃   BT 1    ┃   BT 2    ┃   BT 3    ┃   BT 4    ┃   BT 5    ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃  BT CLEAR ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┃  BT CLEAR ┃  OUT TOG  ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃ BOOTLOAD  ┃   RESET   ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃   RESET   ┃ BOOTLOAD  ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-            &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5   &out OUT_TOG &none       &none       &none       &none
-                &bt BT_CLR  &none       &none       &none       &none           &none       &none       &none       &none       &none
-    &bootloader &sys_reset  &none       &none       &none       &none           &none       &none       &none       &none       &sys_reset  &bootloader
+            &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5    &none       &none       &none       &none       &none
+                &bt BT_CLR  &out OUT_TOG &none      &none       &none           &none       &none       &none       &none       &none
+    &none       &none       &none       &none       &none       &none           &none       &none       &none       &none       &none       &none
                                         &to BASE    &to BASE    &to BASE        &to BASE    &to BASE    &to BASE
                         >;
                 };
